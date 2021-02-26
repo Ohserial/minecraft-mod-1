@@ -26,3 +26,6 @@ jobs:
       run: ./gradlew build jar
     - name: Upload plugin jar
       uses: actions/upload-artifact@v2.2.2
+      with:
+       name: plugin.jar
+       path: build/reobfJar/output.jar
