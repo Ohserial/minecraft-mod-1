@@ -10,6 +10,10 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
+    @SubscribeEvent
+    public static void registerRenders(ModelRegistryEvent event) {
+        registerRender(ExampleMod.mySword);
+    }
 
     private static void registerRender (Item item) {
         ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation( item.getRegistryName(), "inventory"));
